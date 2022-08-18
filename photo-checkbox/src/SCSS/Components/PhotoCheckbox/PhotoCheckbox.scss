@@ -1,0 +1,29 @@
+$photo-checkbox-color: #999999;
+$photo-checkbox-select: #00ff00;
+
+.photo-checkbox {
+    width: 200px;
+    height: 200px;
+    margin: 1%;
+
+    label {
+        box-sizing: border-box;
+
+        display: inline-block;
+        width: 100%;    
+        height: 100%;
+
+        background-color: $photo-checkbox-color;
+        border-radius: 15px;
+        border: 2px solid black;
+    }
+
+    input {
+        display: none;
+
+        &:checked + label {
+            background-color: darken($photo-checkbox-color, 15);
+            border: 4px solid $photo-checkbox-select;
+        }
+    }
+}
