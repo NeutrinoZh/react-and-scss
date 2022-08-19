@@ -31,6 +31,11 @@
         text-align: center;
     }
     
+    @keyframes tooltips-animation {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
     &:hover {
         &::after {
             bottom: calc(100% - $triangle);
@@ -40,9 +45,14 @@
 
         &::before {
             display: block;
+            
             bottom: calc(100% + $triangle);
             left: 50%;
             transform: translateX(-50%);
+        }
+
+        &::after, &::before {
+            animation: tooltips-animation 300ms ease-out forwards;
         }
     }
 }
