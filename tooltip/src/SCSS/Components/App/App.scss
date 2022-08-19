@@ -1,4 +1,32 @@
 .app {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 8vh 0vh;
+    height: calc(100vh - 16vh);
+}
+
+.my-label {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+
+#a {
+    background-color: blue;
+    align-self: flex-start;
+}
+
+#b {
+    background-color: green;
+}
+
+#c {
+    background-color: red;
+    align-self: flex-end;
+}
+
+#d {
+    background-color: black;
 }

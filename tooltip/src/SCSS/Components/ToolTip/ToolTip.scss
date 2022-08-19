@@ -1,0 +1,48 @@
+.tooltip {
+    $triangle: 8px;
+    $bg-color: #333;
+    $txt-color: #fff;
+
+    position: relative;
+
+    &::after, &::before {
+        position: absolute;
+    }
+
+    &::after {
+        content: '';
+        border: $triangle solid transparent;
+    } 
+
+    &::before {
+        content: attr(tooltip);
+
+        display: none;
+
+        border-radius: 10px;
+        padding: 1ch;
+
+        white-space: nowrap;
+
+        background-color: $bg-color;
+        color: $txt-color;
+
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+    }
+    
+    &:hover {
+        &::after {
+            bottom: calc(100% - $triangle);
+            left: calc(50% - $triangle);
+            border-top-color: $bg-color;
+        }
+
+        &::before {
+            display: block;
+            bottom: calc(100% + $triangle);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
