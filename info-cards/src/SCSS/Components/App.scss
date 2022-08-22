@@ -1,0 +1,30 @@
+.app {
+    display: flex;
+    justify-content: space-between;
+    
+    background-color:  #E6E5E1;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 35vw;
+}
+
+.right {
+    background-color: white;
+    width: 60vw;
+    margin: 2%;
+
+    border: 1px solid black;
+
+    h1 {
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+    }
+}
