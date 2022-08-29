@@ -1,0 +1,14 @@
+.stars {
+    .star {
+        color: gray;
+        
+        @keyframes anim {
+            0% { color: gray }
+            100% { color: red; }
+        }
+
+        &-active {
+            animation: anim 1s forwards;
+        }
+    }
+}
